@@ -1,27 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>О привет Человек!</title>
-  <style>
-    body{
-      background-color: black;
-      padding: 0;
-      margin: 0;
-    }
-    h1{
-      color: white;
-      text-align: center;
-      height: 600px;
-      line-height: 600px;
-    }
-  </style>
+	<meta charset="UTF-8">
+	<title>Js-Node</title>
+	<style>
+		 *{
+		 	padding: 0;
+		 	margin: 0;
+		 }
+		 .range{
+		 	background-color: green;
+		 	margin-top: 20px;
+		 }
+		 .input-text{
+		 	border-radius: 5px;
+		 }
+		 #test{
+		 	height: 0px;
+		 	width: 100%;
+		 	background: black;
+		 }
+
+	</style>
 </head>
-<body>
-  <header>
-    <h1>
-      Hello®
-    </h1>
-  </header>
+<body id='bodyq'>
+	<center>
+	<input type="range" step="1" min="0" max="700" id="range-test" value="0" oninput="fun1()" class="range">
+	</center>
+	<center>
+	<footer>
+	<div id="test">
+			<h1 style="color: white; font-size: 80px; cursor: url('http://www.rw-designer.com/cursor-extern.php?id=74271');">Привіт</h1>
+	</div>
+	</footer>
+	</center>
+
+	<script>
+		function fun1() {
+			var range = document.getElementById('range-test');
+			var div = document.getElementById('test');
+			div.style.height=range.value+'px';
+			var body = document.getElementById('bodyq')
+		}
+		fun1();
+
+	</script>
 </body>
 </html>
